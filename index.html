@@ -1,10 +1,11 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>my profile ♡</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 
   <style>
     * {
@@ -53,7 +54,7 @@
       letter-spacing: 2px;
     }
 
-.profile {
+ .profile {
   width: 330px;
   padding: 30px;
   text-align: center;
@@ -106,4 +107,66 @@
     }
 
     .server {
-     
+      padding: 15px;
+      background: #1b1b1b;
+      border-radius: 10px;
+      text-align: left;
+    }
+
+    .server small {
+      color: #aaa;
+    }
+
+    .join {
+      display: block;
+      margin-top: 12px;
+      padding: 10px;
+      text-align: center;
+      background: white;
+      color: black;
+      border-radius: 7px;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="welcome" id="welcome">
+    <button class="heart" id="enter" aria-label="Enter website">♡</button>
+    <p>CLICK THE HEART TO ENTER</p>
+  </div>
+
+  <main class="profile hidden" id="profile">
+    <div class="avatar">♡</div>
+    <h1>fangs</h1>
+    <p class="subtitle">click ♡ for socials</p>
+
+    
+<div class="socials">
+  <a href="#" title="Twitch"><i class="fa-brands fa-twitch"></i></a>
+  <a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="#" title="Throne"><i class="fa-solid fa-crown"></i></a>
+</div>
+
+
+    <div class="server">
+      <strong>♡ sweet</strong><br>
+      <small>✦ little corner of the internet</small>
+      <a class="join" href="#">join ♡</a>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("enter").addEventListener("click", function () {
+      document.getElementById("welcome").classList.add("hidden");
+      document.getElementById("profile").classList.remove("hidden");
+    });
+  </script>
+</body>
+</html>
