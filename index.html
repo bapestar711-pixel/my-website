@@ -66,8 +66,10 @@ border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
 
   border-radius: 16px;
-  box-shadow: 0 0 35px #000;
-}
+box-shadow:
+  0 0 25px rgba(255, 150, 210, 0.18),
+  0 0 55px rgba(175, 100, 255, 0.15),
+  0 0 90px rgba(255, 150, 210, 0.08);
 
     .avatar {
       width: 95px;
@@ -98,16 +100,29 @@ border: 1px solid rgba(255, 255, 255, 0.15);
       margin: 25px 0;
     }
 
-    .socials a {
-      color: white;
-      text-decoration: none;
-      font-size: 20px;
-      transition: color 0.2s;
-    }
+   
+.socials a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.7);
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.45));
+  transition: color 0.25s ease, filter 0.25s ease;
+}
 
-    .socials a:hover {
-      color: #ffb6d5;
-    }
+
+ 
+.socials a:hover {
+  color: #ff9ed8;
+  text-shadow: 0 0 8px #ff9ed8;
+  filter: drop-shadow(0 0 5px #ff9ed8)
+          drop-shadow(0 0 12px #c77dff);
+}
+
 
     .server {
       padding: 15px;
@@ -150,12 +165,26 @@ border: 1px solid rgba(255, 255, 255, 0.15);
     <p class="subtitle">click ♡ for socials</p>
 
     
+
 <div class="socials">
-  <a href="#" title="Twitch"><i class="fa-brands fa-twitch"></i></a>
-  <a href="#" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
-  <a href="#" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-  <a href="#" title="Throne"><i class="fa-solid fa-crown"></i></a>
+  <a href="#" title="Twitch">
+    <i class="fa-brands fa-twitch"></i>
+    <span>Twitch</span>
+  </a>
+  <a href="#" title="X">
+    <i class="fa-brands fa-x-twitter"></i>
+    <span>X</span>
+  </a>
+  <a href="#" title="TikTok">
+    <i class="fa-brands fa-tiktok"></i>
+    <span>TikTok</span>
+  </a>
+  <a href="#" title="Throne">
+    <i class="fa-solid fa-crown"></i>
+    <span>Throne</span>
+  </a>
 </div>
+
 
 
     <div class="server">
