@@ -70,18 +70,19 @@ box-shadow:
   0 0 25px rgba(255, 150, 210, 0.18),
   0 0 55px rgba(175, 100, 255, 0.15),
   0 0 90px rgba(255, 150, 210, 0.08);
+}
 
-    .avatar {
-      width: 95px;
-      height: 95px;
-      margin: 0 auto 15px;
-      border-radius: 50%;
-      background: #292929;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 38px;
-    }
+.avatar {
+  width: 95px;
+  height: 95px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #292929;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+}
 
     h1 {
       font-size: 23px;
@@ -194,11 +195,17 @@ box-shadow:
     </div>
   </main>
 
-  <script>
-    document.getElementById("enter").addEventListener("click", function () {
-      document.getElementById("welcome").classList.add("hidden");
-      document.getElementById("profile").classList.remove("hidden");
-    });
-  </script>
+
+<script>
+  const enterButton = document.getElementById("enter");
+  const welcomeScreen = document.getElementById("welcome");
+  const profileCard = document.getElementById("profile");
+
+  enterButton.addEventListener("click", function () {
+    welcomeScreen.classList.add("hidden");
+    profileCard.classList.remove("hidden");
+  });
+</script>
+
 </body>
 </html>
